@@ -17,6 +17,7 @@ public class EmployeeSalaryManagementSystem {
         menu();
     }
 
+    /** Menu **/
     public static void menu() {
         int choice = 0;
 
