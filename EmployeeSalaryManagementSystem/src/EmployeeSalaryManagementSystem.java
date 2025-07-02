@@ -210,7 +210,8 @@ public class EmployeeSalaryManagementSystem {
 
                 // Input and validate performance scale
                 while (true) {
-                    System.out.print("\nWhat is the performance of employee ID: "+ bonusId + ", " + names[i] + " on a scale of 1-5? >> ");
+                    System.out.print("\nWhat is the performance of employee ID: "+ bonusId + ", " + names[i] +
+                            " on a scale of 1-5? >> ");
                     String performanceInput = input.nextLine().trim();
 
                     if (isValidInt(performanceInput)) {
@@ -279,11 +280,13 @@ public class EmployeeSalaryManagementSystem {
         }
 
         // Record Header
-        System.out.printf("\n%-10s %-20s %-20s %-15s %-20s\n", "ID", "Names", "Salaries ($)", "Bonuses ($)", "Salaries After Bonus ($)");
+        System.out.printf("\n%-10s %-20s %-20s %-15s %-20s\n", "ID", "Names", "Salaries ($)", "Bonuses ($)",
+                "Salaries After Bonus ($)");
 
         // Display all employee records
         for(int i=0; i<count; i++){    // This is to iterate the array and print the entire table
-            System.out.printf("%-10d %-20s %-20.2f %-15.2f %-20.2f\n",ids[i], names[i],salaries[i], bonuses[i],salariesAfterBonuses[i]);
+            System.out.printf("%-10d %-20s %-20.2f %-15.2f %-20.2f\n",ids[i], names[i],salaries[i], bonuses[i],
+                    salariesAfterBonuses[i]);
         }
     }
 
@@ -332,7 +335,8 @@ public class EmployeeSalaryManagementSystem {
     /** Displays a formatted title for sections **/
     public static void title(String text) {
         System.out.println();
-        System.out.printf("====================================== %s ======================================\n", text);
+        System.out.printf("====================================== %s ======================================\n",
+                text);
     }
 
     /** Validates employee name **/
