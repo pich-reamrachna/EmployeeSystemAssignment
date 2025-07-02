@@ -102,7 +102,6 @@ public class EmployeeSalaryManagementSystem {
 
         System.out.println("* Employee's name has been entered into the record. *");
 
-
         // Input and validate employee ID
         int id;
         while (true) {
@@ -348,6 +347,14 @@ public class EmployeeSalaryManagementSystem {
         for (char c : name.toCharArray()) {
             if (!Character.isLetter(c) && c!= ' ') {
                 System.out.println("* Name cannot be anything other than letters and spaces. Please try again. *");
+                return false;
+            }
+        }
+
+        // Check for duplicate names (case-insensitive)
+        for (int i = 0; i < count; i++) {
+            if (names[i] != null && names[i].equalsIgnoreCase(name)) {
+                System.out.println("* An employee with this name already exists. Please try again. *");
                 return false;
             }
         }
